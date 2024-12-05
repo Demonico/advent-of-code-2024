@@ -19,3 +19,16 @@ impl Solution for Day01Puzzle1 {
         result.to_string()
     }
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_example() {
+        let distance: i32 = Day01Puzzle1::solve("test-input/day01.txt").parse().expect("Failed to parse distance");
+        assert_eq!(distance, 11);
+    }
+
+}

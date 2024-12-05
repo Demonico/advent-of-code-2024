@@ -2,8 +2,6 @@ mod solution;
 mod days;
 
 use crate::days::day01;
-// use crate::days::day01::puzzle1::Day01Puzzle1;
-// use crate::days::day01::puzzle2::Day01Puzzle2;
 use solution::Solution;
 
 fn main() {
