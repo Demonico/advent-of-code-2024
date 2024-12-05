@@ -5,7 +5,6 @@ use std::collections::BinaryHeap;
 pub struct Day01Puzzle1;
 
 
-
 impl Solution for Day01Puzzle1 {
     fn solve(input: &str) -> String {
         let (vec_a, vec_b) = lines_to_vecs(input);

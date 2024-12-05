@@ -46,7 +46,7 @@ To find the total distance between the left list and the right list, add up the 
 
 Your actual left and right lists contain many location IDs. What is the total distance between your lists?
 
-### My Summary
+### Pseudocode Part 1
 This days challenge boils down to the following main points
 * You are given two unsorted lists
 * You are to compare the smalled from each list and determine the distance between them
@@ -84,3 +84,8 @@ For these example lists, here is the process of finding the similarity score:
 So, for these example lists, the similarity score at the end of this process is 31 (9 + 4 + 0 + 0 + 9 + 9).
 
 Once again consider your left and right lists. What is their similarity score?
+
+### Pseudocode Part 2
+- Create hashmap from first list
+- Loop over second list to count occurances
+- multiply
