@@ -1,4 +1,4 @@
-use crate::days::lines_to_vecs;
+use crate::days::cols_to_vecs;
 use crate::solution::Solution;
 use std::collections::HashMap;
 
@@ -6,7 +6,7 @@ pub struct Day01Puzzle2;
 
 impl Solution for Day01Puzzle2 {
     fn solve(input: &str) -> String {        
-        let (vec_a, vec_b) = lines_to_vecs(input);
+        let (vec_a, vec_b) = cols_to_vecs(input);
         let mut counts = HashMap::new();
         for &item in vec_b.iter() {
             *counts.entry(item).or_insert(0) += 1;
