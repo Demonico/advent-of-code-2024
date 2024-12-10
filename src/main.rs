@@ -13,4 +13,5 @@ fn main() {
     println!("Day 2, Puzzle 2: {}", day02::puzzle2::Day02Puzzle2::solve("input/day02.txt"));
     // Day 3
     println!("Day 3, Puzzle 1: {}", day03::puzzle1::Day03Puzzle1::solve("input/day03.txt"));
+    println!("Day 3, Puzzle 2: {}", day03::puzzle2::Day03Puzzle2::solve("input/day03.txt"));
 }

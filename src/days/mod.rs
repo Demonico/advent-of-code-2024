@@ -14,6 +14,7 @@ pub mod day02 {
 
 pub mod day03 {
     pub mod puzzle1;
+    pub mod puzzle2;
 }
 
 pub(crate) fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
