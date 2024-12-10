@@ -18,13 +18,10 @@ impl Solution for Day02Puzzle2 {
                 is_safe(&report, decreasing.clone(), true),
                 is_safe(&reversed_report, increasing.clone(), true),
                 is_safe(&reversed_report, decreasing.clone(), true)
-            ];
-            // safe_count += if safe.iter().any(|&i| i == true) { 1 } else { 0 };
+            ];            
             if safe.iter().any(|x| *x == true) {                
                 safe_count += 1;
-            } else {
-                println!("Report {:?}", report);
-            }
+            } 
         }
 
         safe_count.to_string()
