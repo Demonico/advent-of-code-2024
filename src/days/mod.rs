@@ -17,6 +17,11 @@ pub mod day03 {
     pub mod puzzle2;
 }
 
+pub mod day04 {
+    pub mod puzzle1;
+    pub mod puzzle2;
+}
+
 pub(crate) fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
 where
     P: AsRef<Path>,
@@ -62,4 +67,16 @@ pub(crate) fn lines_to_vec(file_path: &str) -> Vec<Vec<i32>> {
         }
     }
     result
+}
+
+pub(crate) fn string_lines_to_grid(file_path: &str) -> Vec<Vec<char>> {
+    let mut grid = Vec::new();
+    if let Ok(lines) = read_lines(file_path) {
+        for line_result in lines {
+            if let Ok(line) = line_result {
+                grid.push(line.chars().collect::<Vec<char>>());
+            }
+        }
+    }    
+    grid
 }
