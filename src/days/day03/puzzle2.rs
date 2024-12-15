@@ -5,7 +5,7 @@ use regex::Regex;
 pub struct Day03Puzzle2 {}
 
 impl Solution for Day03Puzzle2 {
-    fn solve( input: &str) -> String {
+    fn solve( input: &str) -> i32 {
         let mut total = 0;
         let mut matches: Vec<Matches> = Vec::new(); 
 
@@ -27,7 +27,7 @@ impl Solution for Day03Puzzle2 {
             // println!("total {}", total);
         }
 
-        total.to_string()
+        total
     }}
 
 #[derive(Debug)]
@@ -66,6 +66,6 @@ mod tests {
     #[test]
     fn test_day03_puzzle1() {
         let result = Day03Puzzle2::solve("test-input/day03.txt");
-        assert_eq!(result, "48");
+        assert_eq!(result, 48);
     }
 }

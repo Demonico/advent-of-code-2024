@@ -17,7 +17,7 @@ use crate::solution::Solution;
 pub struct Day04Puzzle2;
 
 impl Solution for Day04Puzzle2 {
-    fn solve(input: &str) -> String {
+    fn solve(input: &str) -> i32 {
         let mut total = 0;
         
         let grid = string_lines_to_grid(input);        
@@ -30,7 +30,7 @@ impl Solution for Day04Puzzle2 {
             }
         }
         
-        total.to_string()
+        total
     }
 }
 
@@ -55,6 +55,6 @@ mod tests {
     #[test]
     fn test_day04_puzzle2() {
         let count = Day04Puzzle2::solve("test-input/day04.txt");
-        assert_eq!(count, "9");
+        assert_eq!(count, 9);
     }
 }

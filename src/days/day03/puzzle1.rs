@@ -5,7 +5,7 @@ use regex::Regex;
 pub struct Day03Puzzle1 {}
 
 impl Solution for Day03Puzzle1 {
-    fn solve( input: &str) -> String {
+    fn solve( input: &str) -> i32 {
         let mut total = 0;
         let mut tuples: Vec<(i32,i32)> = Vec::new(); 
 
@@ -21,7 +21,7 @@ impl Solution for Day03Puzzle1 {
             total += tuple.0 * tuple.1;
         }
 
-        total.to_string()
+        total
     }}
 
 fn parse_muls(hay: &str ) -> Vec<(i32, i32)> {
@@ -52,6 +52,6 @@ mod tests {
     #[test]
     fn test_day03_puzzle1() {
         let result = Day03Puzzle1::solve("test-input/day03.txt");
-        assert_eq!(result, "161");
+        assert_eq!(result, 161);
     }
 }

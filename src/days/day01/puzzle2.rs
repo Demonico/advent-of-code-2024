@@ -5,7 +5,7 @@ use std::collections::HashMap;
 pub struct Day01Puzzle2;
 
 impl Solution for Day01Puzzle2 {
-    fn solve(input: &str) -> String {        
+    fn solve(input: &str) -> i32 {        
         let (vec_a, vec_b) = cols_to_vecs(input);
         let mut counts = HashMap::new();
         for &item in vec_b.iter() {
@@ -15,7 +15,6 @@ impl Solution for Day01Puzzle2 {
             .iter()
             .map(|item| counts.get(item).unwrap_or(&0) * item)
             .sum::<i32>()
-            .to_string()
     }
 }
 
@@ -26,7 +25,7 @@ mod tests {
 
     #[test]
     fn test_example() {
-        let similarity: i32 = Day01Puzzle2::solve("test-input/day01.txt").parse().expect("Failed to parse distance");
+        let similarity: i32 = Day01Puzzle2::solve("test-input/day01.txt");
         assert_eq!(similarity, 31);
     }
 

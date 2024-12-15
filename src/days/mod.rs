@@ -1,5 +1,5 @@
 use std::fs::File;
-use std::io::{self, BufRead};
+use std::io::{self, BufRead, BufReader};
 use std::path::Path;
 
 pub mod day01 {
@@ -20,6 +20,15 @@ pub mod day03 {
 pub mod day04 {
     pub mod puzzle1;
     pub mod puzzle2;
+}
+
+pub mod day05 {
+    pub mod puzzle1;
+}
+
+pub(crate) fn read_file(filename: &str) -> BufReader<File> {
+    let file = File::open(filename).unwrap();
+    BufReader::new(file)
 }
 
 pub(crate) fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>

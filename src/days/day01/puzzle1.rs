@@ -6,7 +6,7 @@ pub struct Day01Puzzle1;
 
 
 impl Solution for Day01Puzzle1 {
-    fn solve(input: &str) -> String {
+    fn solve(input: &str) -> i32 {
         let (vec_a, vec_b) = cols_to_vecs(input);
         let mut heap_a = BinaryHeap::from(vec_a);
         let mut heap_b = BinaryHeap::from(vec_b);
@@ -16,7 +16,7 @@ impl Solution for Day01Puzzle1 {
             result += a.abs_diff(b)
         }
 
-        result.to_string()
+        result as i32
     }
 }
 
@@ -27,7 +27,7 @@ mod tests {
 
     #[test]
     fn test_example() {
-        let distance: i32 = Day01Puzzle1::solve("test-input/day01.txt").parse().expect("Failed to parse distance");
+        let distance: i32 = Day01Puzzle1::solve("test-input/day01.txt");
         assert_eq!(distance, 11);
     }
 

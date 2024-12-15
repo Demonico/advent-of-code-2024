@@ -4,7 +4,7 @@ use crate::solution::Solution;
 pub struct Day02Puzzle1;
 
 impl Solution for Day02Puzzle1 {
-    fn solve(input: &str) -> String {
+    fn solve(input: &str) -> i32 {
         let reports: Vec<Vec<i32>> = lines_to_vec(input);
 
         let mut safe_count:i32 = 0;
@@ -16,7 +16,7 @@ impl Solution for Day02Puzzle1 {
                 + is_safe(report.clone(),decreasing.clone());
         }
 
-        safe_count.to_string()
+        safe_count
     }
 }
 
@@ -35,7 +35,7 @@ mod tests {
 
     #[test]
     fn test_day02_puzzle1() {
-        let count: i32 = Day02Puzzle1::solve("test-input/day02.txt").parse().unwrap();
+        let count: i32 = Day02Puzzle1::solve("test-input/day02.txt");
         assert_eq!(count, 3);
     }
 }
