@@ -24,6 +24,7 @@ pub mod day04 {
 
 pub mod day05 {
     pub mod puzzle1;
+    pub mod puzzle2;
 }
 
 pub(crate) fn read_file(filename: &str) -> BufReader<File> {
