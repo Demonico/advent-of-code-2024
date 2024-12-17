@@ -1,7 +1,7 @@
 mod solution;
 mod days;
 
-use crate::days::{day01, day02, day03, day04, day05};
+use crate::days::{day01, day02, day03, day04, day05, day06};
 use solution::Solution;
 
 fn main() {
@@ -20,5 +20,7 @@ fn main() {
     // Day 5
     println!("Day 5, Puzzle 1: {}", day05::puzzle1::Day05Puzzle1::solve("input/day05.txt"));
     println!("Day 5, Puzzle 2: {}", day05::puzzle2::Day05Puzzle2::solve("input/day05.txt"));
+    // Day 6
+    println!("Day 6, Puzzle 1: {}", day06::puzzle1::Day06Puzzle1::solve("input/day06.txt"));
     
 }

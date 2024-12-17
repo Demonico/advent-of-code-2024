@@ -27,6 +27,10 @@ pub mod day05 {
     pub mod puzzle2;
 }
 
+pub mod day06 {
+    pub mod puzzle1;
+}
+
 pub(crate) fn read_file(filename: &str) -> BufReader<File> {
     let file = File::open(filename).unwrap();
     BufReader::new(file)
